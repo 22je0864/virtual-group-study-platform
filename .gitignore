@@ -1,0 +1,22 @@
+# dependencies
+**/node_modules
+
+# env files
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# logs
+*.log
+
+# build output
+frontend/dist
+
+# OS files
+.DS_Store
+Thumbs.db
