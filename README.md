@@ -30,7 +30,7 @@ A full-stack platform where students can create/join virtual study groups, chat 
 - **Document Summary** button (PDF-only) extracts text and summarizes
 - Uses **fallback summarizer** (extractive / local) so it works without paid APIs
 
-> Claude / OpenAI can be plugged in optionally, but not required for this project.
+> Claude / OpenAI implemented but due to subscription limit for now I used fallback summary.
 
 ### User Roles
 - `admin` and `member`
