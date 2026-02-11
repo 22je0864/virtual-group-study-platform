@@ -7,11 +7,18 @@ A full-stack platform where students can create/join virtual study groups, chat 
 ---
 
 ## ✨ Features
+### Home Page
+- Logo
+- About the application
+- About Features
+- Login/Signup
 
 ### Study Groups
-- Admins can create study groups
-- Members can join existing groups
+- User can create study groups
+- User can join existing groups
+- Admin of a group can update and delete the group
 - Dashboard shows:
+  - **Profile**
   - **My Study Groups**
   - **Other Available Groups** (Join button)
 
