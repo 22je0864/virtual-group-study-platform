@@ -1,83 +1,79 @@
-# 📚 StudySphere – Real-Time Study Group Platform
+# Virtual Group Study Platform (Real-Time + AI Summaries)
 
-StudySphere is a full-stack web application that enables students to create study groups, collaborate in real-time, share files, and generate structured discussion summaries within a focused learning environment.
+A full-stack platform where students can create/join virtual study groups, chat in real time, share notes/files, and generate AI-style summaries of conversations and uploaded documents.
 
----
-
-## Features
-
-- JWT-based authentication & protected routes
-- Create, join, and manage study groups
-- Real-time group chat using Socket.IO
-- File upload and group-based file storage
-- Server-side discussion summary generation
-- Group-level admin controls (edit / delete group)
-- User profile system with group visibility
-- Live registered user counter on homepage
-- Responsive and modern UI
+> Built for a collaborative learning experience: **groups + chat + files + summaries + roles**.
 
 ---
 
-##  Tech Stack
+## ✨ Features
+
+### Study Groups
+- Admins can create study groups
+- Members can join existing groups
+- Dashboard shows:
+  - **My Study Groups**
+  - **Other Available Groups** (Join button)
+
+### Real-Time Group Chat (Socket.IO)
+- Live messaging inside each group
+- Messages are saved in MongoDB
+- Multi-user support (works in two browsers / incognito)
+
+### File Sharing
+- Upload PDFs/images/docs inside group chat
+- File saved on backend (`/backend/uploads`)
+- Group members can download the file
+
+### AI Summarization
+- **Chat Summary** button generates a summary of group chat
+- **Document Summary** button (PDF-only) extracts text and summarizes
+- Uses **fallback summarizer** (extractive / local) so it works without paid APIs
+
+> Claude / OpenAI implemented but due to subscription limit for now I used fallback summary.
+
+### User Roles
+- `admin` and `member`
+- Admin-only group creation enforced in backend
+
+---
+
+## Tech Stack
 
 **Frontend**
 - React (Vite)
 - React Router
 - Axios
-- Custom CSS (responsive design)
+- Socket.io-client
 
 **Backend**
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
+- Node.js + Express
+- MongoDB + Mongoose
 - Socket.IO
 - JWT Authentication
 - Multer (file uploads)
+- PDF text extraction (`pdfjs-dist`)
 
 ---
 
-## 🧠 Architecture Highlights
+## Screenshots
 
-- RESTful API with modular route structure
-- Real-time WebSocket communication layer
-- Group-level authorization logic
-- Scalable backend ready for AI integration
-- Clean separation of frontend and backend services
+Screenshots are stored in the `screenshots/` folder.
 
+Example:
+- Dashboard
+- Group Chat UI
+- Files modal
+- AI Summary modal
 
 ---
 
-## ⚙️ Installation & Setup
+## Setup & Run Locally
 
-### 1️⃣ Clone Repository
-
+### 1) Clone repo
 ```bash
-git clone https://github.com/your-username/study-group-platform.git
-cd study-group-platform
-
----
-**Backend Setup**
-cd backend
-npm install
-
-**.env**
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-CLAUD_API=your_claud_api_key
-
-Frontend Port : http://localhost:5173
-
-**Future Enhancements**
--AI-powered advanced summarization (LLM integration)
-
--Role-based permissions within groups
-
--Email verification
-
--Notification system
-
--Subscription model for AI features
+git clone <your-repo-url>
+cd virtual-group-study-platform
 
 
 
